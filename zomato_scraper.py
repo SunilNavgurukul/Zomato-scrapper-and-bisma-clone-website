@@ -1,13 +1,18 @@
 from bs4 import BeautifulSoup
 import requests,pprint,time
 from selenium import webdriver
+
+# Here I use webdriver for scrap data
 driver = webdriver.Chrome()
 driver.get('https://www.zomato.com/ncr')
 
 page = driver.execute_script("return document.documentElement.outerHTML")
 driver.quit()
 detail_for_place=[]
+
+
 # This Function will give us Name of location, Total restaurnants and link of restuarnants
+# I will use it in TASK1 And TASK2
 def scrapt_all_detail(page):
 	soup = BeautifulSoup(page,"html.parser")
 	segment_div=soup.find('div', class_='ui segment row')
@@ -21,11 +26,11 @@ def scrapt_all_detail(page):
 		detail_for_place.append(dict)
 	return detail_for_place
 scrapted_data=scrapt_all_detail(page)
-pprint.pprint(scrapted_data)
+# pprint.pprint(scrapted_data)
 
 
 #task 1 
-# In this task I will analyse the total restaurnants by location
+# In this task I analyse the total restaurnants by location
 def analyse_locilities(location):
 	list_by_location=[]
 	id=1
@@ -38,14 +43,14 @@ def analyse_locilities(location):
 		list_by_location.append(dic)
 	return list_by_location
 analysis_places=analyse_locilities(scrapted_data)
-pprint.pprint(analysis_places)
+# pprint.pprint(analysis_places)
 
 
 #task 2
 print('\n\n<========Enter the id for entering for the particular location==========>\n\n')
 user_input=int(input())
 print('\n\nPlease wait...\n\n')
-time.sleep(3)
+time.sleep(2)
 print('Thanks\n')
 
 # This funtion is finding link of a webside. I will use it to find the task 2's output
