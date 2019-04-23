@@ -2,14 +2,14 @@
 In this repository I will add here zomato scrapper, a website with(HTML/CSS) and a registration form
 
 
-#How to see my website
+# How to see my website
 
 Open the this link to see my website
 https://sunilnavgurukul.github.io/Assignments/bisma%20website/Bisma.html
 
 
 
-#Setup for Zomato scraper
+# Setup for Zomato scraper
 
 https://github.com/SunilNavgurukul/Assignments.git
 
