@@ -23,3 +23,10 @@ as well as some modules should be in your laptop or computer.
 3) selenium         (   sudo pip3 install -U selenium   )
 4) pprint
 5) time             (   pip install time    )
+
+
+
+
+# hosted link
+
+https://sunilnavgurukul.github.io/Zomato-scrapper-and-bisma-clone-website/bisma%20website/Bisma.html
